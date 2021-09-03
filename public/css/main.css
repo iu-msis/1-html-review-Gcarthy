@@ -10,3 +10,13 @@ body {
   a {
     color: #FF0000;
   }
+
+  #homeTitle{
+      Color: #B22222;
+  } 
+
+  /* Thumbnail reference from W3Schools */
+  img {
+    padding: 5px; 
+    width: 150px;
+  }
