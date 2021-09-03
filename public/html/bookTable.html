@@ -83,17 +83,19 @@
   <h1>Add your book to the table</h1>
   <form>
   <label for="title">Title:</label><br>
-  <input type="text" id="title" name="title">
+  <input type="text" id="title" name="title"><br>
   <label for="auther">Author:</label><br>
   <input type="text" id="author" name="author"><br>
   <label for="year">Year:</label><br>
-  <input type="number" id="year" name="year">
+  <input type="number" id="year" name="year"><br>
   <label for="Publusher">Publisher:</label><br>
   <input type="text" id="publisher" name="publisher"><br>
   <label for="pageCount">Page Count:</label><br>
-  <input type="number" id="pageCount" name="pageCount">
+  <input type="number" id="pageCount" name="pageCount" min="1400" max="2021"><br>
   <label for="msrp">MSRP:</label><br>
-  <input type="number" step="0.01" id="msrp" name="msrp">
+  <input type="number" step="0.01" id="msrp" name="msrp"><br>
+
+  <input type="submit" value="Submit">
   </form>
 
 </body>
