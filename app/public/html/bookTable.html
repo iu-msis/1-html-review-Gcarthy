@@ -34,7 +34,7 @@
     </div>
   </nav>
   
-  <table class="table">
+  <table class="table" id="classTable">
     <thead>
       <tr>
         <th scope="col">Title</th>
@@ -100,6 +100,12 @@
 
   <input type="submit" value="Submit">
   </form>
+
+
+  <script src='../js/tablesort.min.js'></script>
+  <script>
+    new Tablesort(document.getElementById('classTable'));
+  </script>
 
 </body>
 </html>
