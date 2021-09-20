@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/main.css">
 
     <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -38,7 +39,7 @@
     <img v-bind:src="person.picture.large">
     <ul style="list-style-type:none;">
       <li>Country: {{ person.location.country }}</li>
-      <li>Birthday: {{ person.dob.date }}</li>
+      <li>Birthday: {{ formatDate }}</li>
       <li>Age: {{ person.dob.age }}</li>
       <li>Email: <a v-bind:href="'mailto:'+person.email">{{ person.email }}</a></li>
     </ul>
