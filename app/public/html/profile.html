@@ -9,6 +9,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
+
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -31,19 +33,17 @@
     </div>
   </nav>
   
-  <div class="text-center">
-    <h1>Jerome Martian</h1>
+  <div class="text-center" id="randomApp">
+    <h1>{{ person.name.first }} {{ person.name.last }}</h1>
+    <img v-bind:src="person.picture.large">
+    <ul style="list-style-type:none;">
+      <li>Country: {{ person.location.country }}</li>
+      <li>Birthday: {{ person.dob.date }}</li>
+      <li>Age: {{ person.dob.age }}</li>
+      <li>Email: <a v-bind:href="'mailto:'+person.email">{{ person.email }}</a></li>
+    </ul>
   </div>
-  <div class="text-center">
-  <img src="../img/download.jpg">
-  </div>
-  <div class="text-center">
-  <ul style="list-style-type:none;">
-    <li>Country: Canada</li>
-    <li>Birthday: 04/20/1996</li>
-    <li>Age: 25</li>
-    <li>Email: <a href="mailto:Jmart@gmail.com">JMart@gmail.com</a></li>
-  </ul>
-</div>
+
+<script src="../js/index.js"></script>
 </body>
 </html>
