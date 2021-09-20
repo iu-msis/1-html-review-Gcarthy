@@ -9,7 +9,7 @@ const Offer = {
     computed: {
         formatDate() {
             return dayjs(this.person.dob.date)
-            .format('D MMM YYYY')
+            .format('D MMM, YYYY')
         }
     },
 
