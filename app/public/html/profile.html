@@ -45,6 +45,10 @@
       <li>Email: <a v-bind:href="'mailto:'+person.email">{{ person.email }}</a></li>
     </ul>
   </template>
+
+  <form v-on:submit.prevent="fetchUserData">
+    <button type="submit">Refresh</button>
+  </form>
   </div>
 
 <script src="../js/index.js"></script>

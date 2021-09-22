@@ -13,19 +13,22 @@ const Offer = {
         }
     },
 
+methods: {
+        fetchUserData() {
+            fetch('https://randomuser.me/api/')
+            .then( response => response.json() )
+            .then( (responseJson) => {
+                console.log(responseJson);
+                this.person = responseJson.results[0];
+            })
+            .catch( (err) => {
+                console.error(err);
+            })
+        }
+    },
     created() {
-        fetch('https://randomuser.me/api/')
-        .then( response => response.json() )
-        .then( (responseJson) => {
-            this.person = responseJson.results[0];
-        })
-        .catch( (err) => {
-            console.error(err);
-        })
-        console.log("B");
-    } //end created
-} // end Offer config
-
+        this.fetchUserData();
+    }
+} 
   
 Vue.createApp(Offer).mount('#randomApp');
-console.log("Z");
